@@ -1,15 +1,22 @@
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.7;
     color: #777;
+    box-sizing: border-box;
+
     /* padding: 30px; */
 }
 
@@ -20,14 +27,14 @@ body {
     position: relative;
 }
 
-.logo-box{
+.header__logo-box{
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: .5rem;
+    right: 1rem;
 }
 
-.logo{
-    height: 60px;
+.header__logo{
+    height: 6rem;
 }
 
 .heading-primary{
@@ -39,36 +46,36 @@ body {
     transform: translateY(-60%);
 }
 
-.heading-primary-main{
+.heading-primary--main{
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;   
+    letter-spacing: 3.5rem;   
     animation: moveInLeft .5s ease-out;
     animation-fill-mode: forwards;
 }
 
-.heading-primary-main:hover{
+.heading-primary--main:hover{
     animation: changeOpacity 1.15s ease-out infinite;
     cursor: pointer;
 }
 
-.heading-primary-sub{
+.heading-primary--sub{
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 400;
-    letter-spacing: 4.9px;
+    letter-spacing: .5rem;
     animation: moveInUp 1.5s ease-out;
 }
 
 @keyframes moveInLeft{
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
-        transform: translateX(20px);
+        transform: translateX(2rem);
     }
 
     100% {
@@ -80,7 +87,7 @@ body {
 @keyframes moveInUp{
     0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(10rem);
     }
 
     100% {
@@ -102,6 +109,6 @@ body {
 }
 
 .content {
-    padding: 30px;
-    height: 200px;
+    padding: 3rem;
+    height: 20rem;
 }
